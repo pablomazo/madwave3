@@ -370,9 +370,9 @@
      &         .and.iommin.eq.0)then
                  iom0=1
             endif
-            if(iom0.le.j)then
 
-            iom1=min0(j,iommax)
+            iom1=iommax
+            if (iom0.le.iom1) then
             nnn=iom1-iom0+1
             if(nnn.gt.0)then
               call l2mat(bfl2mat,facmass,iom0,iom1,j,Jtot,iommin,iommax)
